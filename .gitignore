@@ -3,3 +3,8 @@
 lib/
 help-me-share.iml
 
+# generated
+pom.xml
+resources/public/js/
+target/
+
