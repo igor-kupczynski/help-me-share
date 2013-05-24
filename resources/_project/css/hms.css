@@ -1,6 +1,6 @@
 div#hms-container {
     position: fixed;
-    left: 0px;
+    left: 0;
     top: 40%;
 
     border: 1px solid gray;
