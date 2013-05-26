@@ -1,56 +1,88 @@
 (ns help-me-share.core
   (:require-macros [hiccups.core :as h])
   (:require [hiccups.runtime :as hiccupsrt]
-            [domina :as dom]))
+            [domina :as dom]
+            [domina.css :as cdom]))
 
 
 ;; Utils
-(defn js-log [item]
+(defn js-log
+  "Logs the passed object to js console. Use only during the development."
+  [item]
   (.log js/console (pr-str item)))
 
 
-(defn extract-opt [param default-opts user-opts]
+(defn extract-opt
+  "Extracts a specific option. If not specified by user use the defaults."
+  [param default-opts user-opts]
   (if-let [user-opt (aget user-opts (name param))]
     user-opt
     (get default-opts param)))
 
 
-(defn extract-opts [default-opts user-opts]
+(defn extract-opts
+  "Parses the options specified by the user merging them with the defaults."
+  [default-opts user-opts]
   (let [params (keys default-opts)
         values (doall (map #(extract-opt % default-opts user-opts) params))]
     (zipmap params values)))
 
 
 ;; Common
-(defmulti build-dom-button identity)
+(defmulti build-plugin-button
+  "Builds a button for given plugin"
+  identity)
+
+(defmulti post-button-appended
+  "A handler invoked after a plugin button is built"
+  identity)
 
 
 ;; Twitter
-(defmethod build-dom-button :twitter [opts]
+(defmethod build-plugin-button :twitter [plugin opts]
   (h/html [:div [:a {:href "https://twitter.com/share"
                      :class "twitter-share-button"
-                     :data-via (:twitter-username opts)
+                     :data-via (str (:twitter-username opts))
                      :data-size "large"
                      :data-count "none"
                      :data-dnt "true"} "Tweet"]]))
 
+;; This is more-or-less a direct translation from twitter docs. Not very clojurish, but does the job.
+(defn twitter-internal [d, s, id]
+  (let [fjs (dom/single-node (cdom/sel s))
+        proto (if (re-find #"http:" (aget d "location")) "http" "https")
+        twitter-src (str proto "://platform.twitter.com/widgets.js")]
+    (if-not (dom/by-id id)
+      (let [js (.createElement d s)
+            fjs-parent (aget fjs "parentNode")]
+        (aset js "id" id)
+        (aset js "src" twitter-src)
+        (.insertBefore fjs-parent js fjs)))))
+
+(defmethod post-button-appended :twitter [plugin opts]
+  (twitter-internal js/document "script" "twitter-wjs"))
 
 
 ;; API
 (def default-opts {:twitter-username "twitter-username"
                    :plugins ["twitter"]})
 
-(defn append-plugin! [parent plugin]
-  (dom/append! parent (build-dom-button plugin)))
+(defn append-plugin!
+  "Appends a plugin to the container"
+  [parent plugin opts]
+  (let [button (build-plugin-button plugin opts)]
+    (dom/append! parent button)
+    (post-button-appended plugin opts)))
 
 
-
-(defn ^:export init [user-opts]
+(defn ^:export init
+  "Initializes the plugin container"
+  [container user-opts]
   (if (and js/document
         (aget js/document "getElementById"))
     (let [opts (extract-opts default-opts user-opts)
-          container (dom/by-id "hms-container")]
+          container (dom/by-id container)]
       (doseq [plugin (:plugins opts)]
-        (append-plugin! container (keyword plugin))))))
+        (append-plugin! container (keyword plugin) opts)))))
 
 
