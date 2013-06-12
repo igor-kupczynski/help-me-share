@@ -28,17 +28,29 @@
     (zipmap params values)))
 
 
-;; Common
+
+;;;;  Common
 (defmulti build-plugin-button
   "Builds a button for given plugin"
   identity)
+
+
+(defmulti pre-button-appended
+  "A handler invoked before a plugin button is built"
+  identity)
+
 
 (defmulti post-button-appended
   "A handler invoked after a plugin button is built"
   identity)
 
 
-;; Twitter
+;; defaults
+(defmethod pre-button-appended :default [plugin opts])
+(defmethod post-button-appended :default [plugin opts])
+
+
+;;;; Twitter
 (defmethod build-plugin-button :twitter [plugin opts]
   (h/html [:div [:a {:href "https://twitter.com/share"
                      :class "twitter-share-button"
@@ -46,6 +58,7 @@
                      :data-size "large"
                      :data-count "none"
                      :data-dnt "true"} "Tweet"]]))
+
 
 ;; This is more-or-less a direct translation from twitter docs. Not very clojurish, but does the job.
 (defn twitter-internal [d, s, id]
@@ -59,18 +72,31 @@
         (aset js "src" twitter-src)
         (.insertBefore fjs-parent js fjs)))))
 
+
 (defmethod post-button-appended :twitter [plugin opts]
   (twitter-internal js/document "script" "twitter-wjs"))
 
 
-;; API
+
+;;;; Facebook
+(defmethod build-plugin-button :facebook [plugin opts]
+  (h/html [:div {:class "fb-like"
+                 :data-send true
+                 :data-width (str (:facebook-width opts))
+                 :data-show-faces true}]))
+
+
+
+;;;; API
 (def default-opts {:twitter-username "twitter-username"
-                   :plugins ["twitter"]})
+                   :facebook-width 450
+                   :plugins ["twitter" "facebook"]})
 
 (defn append-plugin!
   "Appends a plugin to the container"
   [parent plugin opts]
   (let [button (build-plugin-button plugin opts)]
+    (pre-button-appended plugin opts)
     (dom/append! parent button)
     (post-button-appended plugin opts)))
 
