@@ -79,6 +79,12 @@
 
 
 ;;;; Facebook
+(defmethod pre-button-appended :facebook [plugin opts]
+  (let [fb-root (h/html [:div {:id "fb-root"}])
+        body (cdom/sel "body")]
+    (dom/prepend! body fb-root)))
+
+
 (defmethod build-plugin-button :facebook [plugin opts]
   (h/html [:div {:class "fb-like"
                  :data-send true
@@ -90,6 +96,7 @@
 ;;;; API
 (def default-opts {:twitter-username "twitter-username"
                    :facebook-width 450
+                   :facebook-locale "en_US"
                    :plugins ["twitter" "facebook"]})
 
 (defn append-plugin!
