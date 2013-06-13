@@ -55,7 +55,7 @@
   (h/html [:div [:a {:href "https://twitter.com/share"
                      :class "twitter-share-button"
                      :data-via (str (:twitter-username opts))
-                     :data-size "large"
+                     :data-size "medium"
                      :data-count "none"
                      :data-dnt "true"} "Tweet"]]))
 
@@ -88,14 +88,30 @@
 (defmethod build-plugin-button :facebook [plugin opts]
   (h/html [:div {:class "fb-like"
                  :data-send true
+                 :data-layout "button_count"
                  :data-width (str (:facebook-width opts))
                  :data-show-faces true}]))
+
+
+(defn facebook-internal [d, s, id, locale]
+  (let [fjs (dom/single-node (cdom/sel s))]
+    (if-not (dom/by-id id)
+      (let [js (.createElement d s)
+            fjs-parent (aget fjs "parentNode")
+            facebook-src (str "//connect.facebook.net/" locale "/all.js#xfbml=1")]
+        (aset js "id" id)
+        (aset js "src" facebook-src)
+        (.insertBefore fjs-parent js fjs)))))
+
+
+(defmethod post-button-appended :facebook [plugin opts]
+  (facebook-internal js/document "script" "facebook-jssdk" (:facebook-locale opts)))
 
 
 
 ;;;; API
 (def default-opts {:twitter-username "twitter-username"
-                   :facebook-width 450
+                   :facebook-width 100
                    :facebook-locale "en_US"
                    :plugins ["twitter" "facebook"]})
 

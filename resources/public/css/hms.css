@@ -1,0 +1,19 @@
+div#hms-container {
+    position: fixed;
+    left: 0;
+    top: 40%;
+
+    border: 1px solid gray;
+    border-radius: 10px;
+    background: #F3F3F3;
+    padding: 8px;
+}
+
+div#hms-container span.hms-label {
+    font-size: small;
+}
+
+div#hms-container div {
+    clear: both;
+    padding: 2px;
+}
