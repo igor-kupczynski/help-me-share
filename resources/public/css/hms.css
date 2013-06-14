@@ -1,19 +1,18 @@
-div#hms-container {
-    position: fixed;
-    left: 0;
-    top: 40%;
-
-    border: 1px solid gray;
-    border-radius: 10px;
-    background: #F3F3F3;
-    padding: 8px;
+div.hms-container {
+    text-align: center;
+    background-color: #EEEEEE;
+    padding-top: 5px;
+    padding-bottom: 3px;
+    border-top: solid 1px grey;
+    border-bottom: solid 1px grey;
 }
 
-div#hms-container span.hms-label {
-    font-size: small;
+ul.hms-plugins {
+    list-style: none outside none;
+    padding-left: 0;
+    margin-left: 0;
 }
 
-div#hms-container div {
-    clear: both;
-    padding: 2px;
+ul.hms-plugins li {
+    display: inline-block;
 }

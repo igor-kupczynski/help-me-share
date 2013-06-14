@@ -54,10 +54,10 @@
 (defmethod build-plugin-button :twitter [plugin opts]
   (h/html [:div [:a {:href "https://twitter.com/share"
                      :class "twitter-share-button"
-                     :data-via (str (:twitter-username opts))
-                     :data-size "medium"
-                     :data-count "none"
-                     :data-dnt "true"} "Tweet"]]))
+                     :data-via (:twitter-via opts)
+                     :data-size (:twitter-size opts)
+                     :data-count (:twitter-count opts)
+                     :data-dnt (:twitter-dnt opts)} "Tweet"]]))
 
 
 ;; This is more-or-less a direct translation from twitter docs. Not very clojurish, but does the job.
@@ -87,10 +87,11 @@
 
 (defmethod build-plugin-button :facebook [plugin opts]
   (h/html [:div {:class "fb-like"
-                 :data-send true
-                 :data-layout "button_count"
-                 :data-width (str (:facebook-width opts))
-                 :data-show-faces true}]))
+                 :data-send (:facebook-send opts)
+                 :data-layout (:facebook-layout opts)
+                 :data-width (:facebook-width opts)
+                 :data-show-faces (:facebook-show-faces opts)}]))
+
 
 
 (defn facebook-internal [d, s, id, locale]
@@ -110,27 +111,49 @@
 
 
 ;;;; API
-(def default-opts {:twitter-username "twitter-username"
-                   :facebook-width 100
+(def default-opts {:twitter-via "twitter-username"
+                   :twitter-size "medium"
+                   :twitter-count "horizontal"
+                   :twitter-dnt "false"
+                   :facebook-send "false"
+                   :facebook-layout "button_count"
+                   :facebook-width "100"
                    :facebook-locale "en_US"
+                   :facebook-show-faces "false"
                    :plugins ["twitter" "facebook"]})
+
+
+(defn wrap-button
+  "Wraps button in div" [btn]
+  (h/html [:li {:class "hms-plugin-button"} btn]))
+
 
 (defn append-plugin!
   "Appends a plugin to the container"
   [parent plugin opts]
-  (let [button (build-plugin-button plugin opts)]
+  (let [button (wrap-button (build-plugin-button plugin opts))]
     (pre-button-appended plugin opts)
     (dom/append! parent button)
     (post-button-appended plugin opts)))
 
 
+(defn prepare-container!
+  "Creates the struture for the container and returns it"
+  [container-id]
+  (let [container (dom/by-id container-id)
+        ul-id (str "ul-" container-id)]
+    (dom/add-class! container "hms-container")
+    (dom/append! container (h/html [:ul {:id ul-id :class "hms-plugins"}]))
+    (dom/by-id ul-id)))
+
+
 (defn ^:export init
   "Initializes the plugin container"
-  [container user-opts]
+  [container-id user-opts]
   (if (and js/document
         (aget js/document "getElementById"))
     (let [opts (extract-opts default-opts user-opts)
-          container (dom/by-id container)]
+          container (prepare-container! container-id)]
       (doseq [plugin (:plugins opts)]
         (append-plugin! container (keyword plugin) opts)))))
 
