@@ -29,16 +29,16 @@
   button the request will go directly to facebook. There are no other
   intermediaries to gather your visitors data.
 
-  Please see an [[example]] or go straight to the [[quickstart]].
+  Please see an [[#example][example]] or go straight to the [[#quickstart][quickstart]].
 
-* Example <<example>>
+* Example
   #+CAPTION: Example 1. Custom style (taken from http://igor.kupczynski.info/).
   #+NAME: fig:ex1
   [[./docs/img/ex1.png]]
 
   An example of a custom style, live demo at http://igor.kupczynski.info/.
 
-* Quickstart <<quickstart>>
+* Quickstart
   =TODO=
 
 * Configuration
