@@ -2,7 +2,7 @@
 
 * Description
   /Help Me Share/ is a small javascript utility which adds /Share/ buttons for
-  various services, i.e. twitter and facebook.
+  various services, i.e. /twitter/ and /facebook/.
 
   It embedded the native twitter and facebook buttons and does not use any
   intermediary. As a result the sharing statistics are not given away to any
@@ -23,13 +23,13 @@
   It is intended as a facility to simplify embedding and configuring third
   party sharing services on your website.
   
-  It is worth noting that there are some alternatives, most notably [[Share This][http://en.wikipedia.org/wiki/ShareThis]]. One feature that differentiate
-  =Help Me Share= is that it uses the sharing services directly. For instance, if
-  your user clicks on the =Like= button the request will go directly to
-  facebook. There are no other intermediaries to gather your visitors data.
+  It is worth noting that there are some alternatives, most notably [[http://en.wikipedia.org/wiki/ShareThis][Share
+  This]]. One feature that differentiate =Help Me Share= is that it uses the
+  sharing services directly. For instance, if your user clicks on the =Like=
+  button the request will go directly to facebook. There are no other
+  intermediaries to gather your visitors data.
 
-  Please see an example ([[example]]) or go straight to the quickstart
-  ([[quickstart]]).
+  Please see an [[example]] or go straight to the [[quickstart]].
 
 * Example <<example>>
   #+CAPTION: Example 1. Custom style (taken from http://igor.kupczynski.info/).
