@@ -1,4 +1,4 @@
-(defproject help-me-share "0.1.0"
+(defproject help-me-share "0.1.1"
   :description "A small javascript utility which adds 'Share' buttons for various services, i.e. twitter and facebook."
   :url "https://github.com/puszczyk/help-me-share"
   :license {:name "Eclipse Public License"
