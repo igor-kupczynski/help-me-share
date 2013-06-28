@@ -41,15 +41,22 @@
   An example of a custom style, live demo at http://igor.kupczynski.info/.
 
 * Quickstart
-** Grab the mimified java script at:     
+** Grab the mimified code
+   
+   Download if from: 
    [[https://raw.github.com/puszczyk/help-me-share/master/resources/stable/hms.min.js]]
 
-** Put the following tag in the place where you want the buttons to show:
+** Insert the container div
+
+   Put the following tag in the place where you want the buttons to show.
    #+BEGIN_SRC html
    <div id="hms-container"></div>     
    #+END_SRC
   
-** Include the script near the end of your page, e.g. just before the closing =</body>= tag and configure the options.
+** Invoke the script
+
+   Include the script near the end of your page, e.g. just before the closing
+   =</body>= tag and configure the options.
    #+BEGIN_SRC html
    <script src="js/hms.js"></script>
    <script>
@@ -67,7 +74,7 @@
    + Map of configuration options. For quickstart it is sufficient to give
      your twitter account name.
 
-** Style the container.
+** Style the container
 
    You need either to provide your own style or use one of the defaults. The
    defaults can be downloaded from the following locations:
@@ -80,6 +87,19 @@
    #+BEGIN_SRC html
    <link rel="stylesheet" type="text/css" href="css/hms.css"/>
    #+END_SRC
+
+** Enjoy!
+   #+CAPTION: Share on Twitter
+   #+NAME: fig:twitter
+   [[./docs/img/twitter-clicked.png]]
+   
+   Twitter button clicked.
+
+   #+CAPTION: Share on Facebook
+   #+NAME: fig:facebook
+   [[./docs/img/facebook-clicked.png]]
+
+   Facebook button clicked.
 
 * Configuration
   =TODO=

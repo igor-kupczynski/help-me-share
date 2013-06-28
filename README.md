@@ -11,10 +11,11 @@
 <li><a href="#sec-3">3. Example</a></li>
 <li><a href="#sec-4">4. Quickstart</a>
 <ul>
-<li><a href="#sec-4-1">4.1. Grab the mimified java script at:</a></li>
-<li><a href="#sec-4-2">4.2. Put the following tag in the place where you want the buttons to show:</a></li>
-<li><a href="#sec-4-3">4.3. Include the script near the end of your page, e.g. just before the closing <code>&lt;/body&gt;</code> tag and configure the options.</a></li>
-<li><a href="#sec-4-4">4.4. Style the container.</a></li>
+<li><a href="#sec-4-1">4.1. Grab the mimified code</a></li>
+<li><a href="#sec-4-2">4.2. Insert the container div</a></li>
+<li><a href="#sec-4-3">4.3. Invoke the script</a></li>
+<li><a href="#sec-4-4">4.4. Style the container</a></li>
+<li><a href="#sec-4-5">4.5. Enjoy!</a></li>
 </ul>
 </li>
 <li><a href="#sec-5">5. Configuration</a></li>
@@ -76,15 +77,21 @@ An example of a custom style, live demo at <http://igor.kupczynski.info/>.
 
 # Quickstart
 
-## Grab the mimified java script at:
+## Grab the mimified code
 
+Download if from: 
 <https://raw.github.com/puszczyk/help-me-share/master/resources/stable/hms.min.js>
 
-## Put the following tag in the place where you want the buttons to show:
+## Insert the container div
+
+Put the following tag in the place where you want the buttons to show.
 
     <div id="hms-container"></div>     
 
-## Include the script near the end of your page, e.g. just before the closing `</body>` tag and configure the options.
+## Invoke the script
+
+Include the script near the end of your page, e.g. just before the closing
+`</body>` tag and configure the options.
 
     <script src="js/hms.js"></script>
     <script>
@@ -102,7 +109,7 @@ needs two arguments:
 -   Map of configuration options. For quickstart it is sufficient to give
     your twitter account name.
 
-## Style the container.
+## Style the container
 
 You need either to provide your own style or use one of the defaults. The
 defaults can be downloaded from the following locations:
@@ -114,6 +121,16 @@ defaults can be downloaded from the following locations:
 And then included on the page within the meta tag:
 
     <link rel="stylesheet" type="text/css" href="css/hms.css"/>
+
+## Enjoy!
+
+![Share on Twitter](./docs/img/twitter-clicked.png)
+
+Twitter button clicked.
+
+![Share on Facebook](./docs/img/facebook-clicked.png)
+
+Facebook button clicked.
 
 # Configuration
 
