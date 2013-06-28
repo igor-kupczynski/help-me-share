@@ -22,4 +22,5 @@
                          :prod {
                                  :source-paths ["src/cljs"]
                                  :compiler {:output-to "resources/public/js/hms.min.js"
+                                            :pretty-print false
                                             :optimizations :advanced}}}})
