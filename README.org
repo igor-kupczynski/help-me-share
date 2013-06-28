@@ -1,4 +1,5 @@
 #+TITLE: Help Me Share
+#+STARTUP: showeverything
 
 * Description
   /Help Me Share/ is a small javascript utility which adds /Share/ buttons for
@@ -23,8 +24,9 @@
   It is intended as a facility to simplify embedding and configuring third
   party sharing services on your website.
   
-  It is worth noting that there are some alternatives, most notably [[http://en.wikipedia.org/wiki/ShareThis][Share
-  This]]. One feature that differentiate =Help Me Share= is that it uses the
+  It is worth noting that there are some alternatives, most notably
+  [[http://en.wikipedia.org/wiki/ShareThis][Share This]].
+  One feature that differentiate =Help Me Share= is that it uses the
   sharing services directly. For instance, if your user clicks on the =Like=
   button the request will go directly to facebook. There are no other
   intermediaries to gather your visitors data.
@@ -39,7 +41,51 @@
   An example of a custom style, live demo at http://igor.kupczynski.info/.
 
 * Quickstart
-  =TODO=
+  1. Grab the mimified java script at:
+     
+     [[https://raw.github.com/puszczyk/help-me-share/master/resources/stable/hms.min.js]]
+
+  2. Put the following tag in the place where you want the buttons to show:
+     
+     #+BEGIN_SRC html
+     <div id="hms-container"></div>     
+     #+END_SRC
+  
+  3. Include the script near the end of your page, e.g. just before the
+     closing =</body>= tag and configure the options.
+
+     #+BEGIN_SRC html
+     <script src="js/hms.js"></script>
+     <script>
+     help_me_share.core.init(
+            'hms-container',
+            {'twitter-via': 'test-user'}
+     );
+     </script>
+     #+END_SRC
+
+     The function =help_me_share.code.init= does the job of creating
+     buttons. It needs two arguments:
+
+     * Id of the container,
+
+     * Map of configuration options.
+
+     For quickstart it is sufficient to give your twitter account name.
+
+  4. Style the container.
+
+     You need either to provide your own style or use one of the
+     defaults. The defaults can be downloaded from the following locations:
+     
+     * [[https://raw.github.com/puszczyk/help-me-share/master/resources/public/css/hms.css]]
+     * https://raw.github.com/puszczyk/help-me-share/master/resources/public/css/hms-fixed.css
+       
+     And then included on the page within the meta tag:
+
+     #+BEGIN_SRC html
+     <link rel="stylesheet" type="text/css" href="css/hms.css"/>
+     #+END_SRC
 
 * Configuration
   =TODO=
