@@ -41,12 +41,10 @@
   An example of a custom style, live demo at http://igor.kupczynski.info/.
 
 * Quickstart
-  1. Grab the mimified java script at:
-     
+  1. Grab the mimified java script at:     
      [[https://raw.github.com/puszczyk/help-me-share/master/resources/stable/hms.min.js]]
 
   2. Put the following tag in the place where you want the buttons to show:
-     
      #+BEGIN_SRC html
      <div id="hms-container"></div>     
      #+END_SRC
@@ -68,7 +66,6 @@
      buttons. It needs two arguments:
 
      * Id of the container,
-
      * Map of configuration options.
 
      For quickstart it is sufficient to give your twitter account name.
