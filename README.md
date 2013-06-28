@@ -9,7 +9,14 @@
 </li>
 <li><a href="#sec-2">2. Rationale</a></li>
 <li><a href="#sec-3">3. Example</a></li>
-<li><a href="#sec-4">4. Quickstart</a></li>
+<li><a href="#sec-4">4. Quickstart</a>
+<ul>
+<li><a href="#sec-4-1">4.1. Grab the mimified java script at:</a></li>
+<li><a href="#sec-4-2">4.2. Put the following tag in the place where you want the buttons to show:</a></li>
+<li><a href="#sec-4-3">4.3. Include the script near the end of your page, e.g. just before the closing <code>&lt;/body&gt;</code> tag and configure the options.</a></li>
+<li><a href="#sec-4-4">4.4. Style the container.</a></li>
+</ul>
+</li>
 <li><a href="#sec-5">5. Configuration</a></li>
 <li><a href="#sec-6">6. Development</a></li>
 <li><a href="#sec-7">7. Default Styles</a>
@@ -69,45 +76,44 @@ An example of a custom style, live demo at <http://igor.kupczynski.info/>.
 
 # Quickstart
 
-1.  Grab the mimified java script at:     
-         <https://raw.github.com/puszczyk/help-me-share/master/resources/stable/hms.min.js>
+## Grab the mimified java script at:
 
-2.  Put the following tag in the place where you want the buttons to show:
-    
-        <div id="hms-container"></div>
+<https://raw.github.com/puszczyk/help-me-share/master/resources/stable/hms.min.js>
 
-3.  Include the script near the end of your page, e.g. just before the
-    closing `</body>` tag and configure the options.
-    
-        <script src="js/hms.js"></script>
-        <script>
-        help_me_share.core.init(
-               'hms-container',
-               {'twitter-via': 'test-user'}
-        );
-        </script>
-    
-    The function `help_me_share.code.init` does the job of creating
-    buttons. It needs two arguments:
-    
-    -   Id of the container,
-    
-    -   Map of configuration options.
-    
-    For quickstart it is sufficient to give your twitter account name.
+## Put the following tag in the place where you want the buttons to show:
 
-4.  Style the container.
-    
-    You need either to provide your own style or use one of the
-    defaults. The defaults can be downloaded from the following locations:
-    
-    -   <https://raw.github.com/puszczyk/help-me-share/master/resources/public/css/hms.css>
-    
-    -   <https://raw.github.com/puszczyk/help-me-share/master/resources/public/css/hms-fixed.css>
-    
-    And then included on the page within the meta tag:
-    
-        <link rel="stylesheet" type="text/css" href="css/hms.css"/>
+    <div id="hms-container"></div>     
+
+## Include the script near the end of your page, e.g. just before the closing `</body>` tag and configure the options.
+
+    <script src="js/hms.js"></script>
+    <script>
+    help_me_share.core.init(
+           'hms-container',
+           {'twitter-via': 'test-user'}
+    );
+    </script>
+
+The function `help_me_share.code.init` does the job of creating buttons. It
+needs two arguments:
+
+-   Id of the container,
+
+-   Map of configuration options. For quickstart it is sufficient to give
+    your twitter account name.
+
+## Style the container.
+
+You need either to provide your own style or use one of the defaults. The
+defaults can be downloaded from the following locations:
+
+-   <https://raw.github.com/puszczyk/help-me-share/master/resources/public/css/hms.css>
+
+-   <https://raw.github.com/puszczyk/help-me-share/master/resources/public/css/hms-fixed.css>
+
+And then included on the page within the meta tag:
+
+    <link rel="stylesheet" type="text/css" href="css/hms.css"/>
 
 # Configuration
 

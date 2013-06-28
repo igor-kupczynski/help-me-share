@@ -41,48 +41,45 @@
   An example of a custom style, live demo at http://igor.kupczynski.info/.
 
 * Quickstart
-  1. Grab the mimified java script at:     
-     [[https://raw.github.com/puszczyk/help-me-share/master/resources/stable/hms.min.js]]
+** Grab the mimified java script at:     
+   [[https://raw.github.com/puszczyk/help-me-share/master/resources/stable/hms.min.js]]
 
-  2. Put the following tag in the place where you want the buttons to show:
-     #+BEGIN_SRC html
-     <div id="hms-container"></div>     
-     #+END_SRC
+** Put the following tag in the place where you want the buttons to show:
+   #+BEGIN_SRC html
+   <div id="hms-container"></div>     
+   #+END_SRC
   
-  3. Include the script near the end of your page, e.g. just before the
-     closing =</body>= tag and configure the options.
+** Include the script near the end of your page, e.g. just before the closing =</body>= tag and configure the options.
+   #+BEGIN_SRC html
+   <script src="js/hms.js"></script>
+   <script>
+   help_me_share.core.init(
+          'hms-container',
+          {'twitter-via': 'test-user'}
+   );
+   </script>
+   #+END_SRC
 
-     #+BEGIN_SRC html
-     <script src="js/hms.js"></script>
-     <script>
-     help_me_share.core.init(
-            'hms-container',
-            {'twitter-via': 'test-user'}
-     );
-     </script>
-     #+END_SRC
+   The function =help_me_share.code.init= does the job of creating buttons. It
+   needs two arguments:
 
-     The function =help_me_share.code.init= does the job of creating
-     buttons. It needs two arguments:
+   + Id of the container,
+   + Map of configuration options. For quickstart it is sufficient to give
+     your twitter account name.
 
-     * Id of the container,
-     * Map of configuration options.
+** Style the container.
 
-     For quickstart it is sufficient to give your twitter account name.
-
-  4. Style the container.
-
-     You need either to provide your own style or use one of the
-     defaults. The defaults can be downloaded from the following locations:
+   You need either to provide your own style or use one of the defaults. The
+   defaults can be downloaded from the following locations:
      
-     * [[https://raw.github.com/puszczyk/help-me-share/master/resources/public/css/hms.css]]
-     * https://raw.github.com/puszczyk/help-me-share/master/resources/public/css/hms-fixed.css
+   * [[https://raw.github.com/puszczyk/help-me-share/master/resources/public/css/hms.css]]
+   * https://raw.github.com/puszczyk/help-me-share/master/resources/public/css/hms-fixed.css
        
-     And then included on the page within the meta tag:
+   And then included on the page within the meta tag:
 
-     #+BEGIN_SRC html
-     <link rel="stylesheet" type="text/css" href="css/hms.css"/>
-     #+END_SRC
+   #+BEGIN_SRC html
+   <link rel="stylesheet" type="text/css" href="css/hms.css"/>
+   #+END_SRC
 
 * Configuration
   =TODO=
