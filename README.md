@@ -155,13 +155,13 @@ You can specify various configuration options in a mapped passed to
 <tr>
 <td class="left">'facebook-send'</td>
 <td class="left">'false'</td>
-<td class="left">If the 'send' button should be included together with the 'like' button. See <code>send= in <https://developers.facebook.com/docs/reference/plugins/like></td>
+<td class="left">If the 'send' button should be included together with the 'like' button. See <code>send</code> in <https://developers.facebook.com/docs/reference/plugins/like></td>
 </tr>
 
 
 <tr>
 <td class="left">'facebook-layout'</td>
-<td class="left">'button\\<sub>count'</sub></td>
+<td class="left">'button count'</td>
 <td class="left">Layout of the button, i.e. where to put the count box. See <code>layout</code> in <https://developers.facebook.com/docs/reference/plugins/like></td>
 </tr>
 
@@ -169,13 +169,13 @@ You can specify various configuration options in a mapped passed to
 <tr>
 <td class="left">'facebook-width'</td>
 <td class="left">'100'</td>
-<td class="left">The width of the 'like' button. See <code>width= in <https://developers.facebook.com/docs/reference/plugins/like></td>
+<td class="left">The width of the 'like' button. See <code>width</code> in <https://developers.facebook.com/docs/reference/plugins/like></td>
 </tr>
 
 
 <tr>
 <td class="left">'facebook-locale'</td>
-<td class="left">'en\\<sub>US'</sub></td>
+<td class="left">'en US'</td>
 <td class="left">Language of the 'like' button. See <https://developers.facebook.com/docs/reference/plugins/like></td>
 </tr>
 
@@ -183,7 +183,7 @@ You can specify various configuration options in a mapped passed to
 <tr>
 <td class="left">'facebook-show-faces'</td>
 <td class="left">'false'</td>
-<td class="left">Whether to display profile photos in 'standard' layout. See <code>show<sub>faces</sub></code> in <https://developers.facebook.com/docs/reference/plugins/like></td>
+<td class="left">Whether to display profile photos in 'standard' layout. See <code>show faces</code> in <https://developers.facebook.com/docs/reference/plugins/like></td>
 </tr>
 
 

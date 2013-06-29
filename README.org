@@ -111,11 +111,11 @@
   | 'twitter-size'        | 'medium'                | Size of the tweeter button. See <code>size</code> in https://dev.twitter.com/docs/tweet-button#properties                                          |
   | 'twitter-count'       | 'horizontal'            | Count box position. See <code>count</code> in https://dev.twitter.com/docs/tweet-button#properties                                                              |
   | 'twitter-dnt'         | 'false'                 | Opt out of tailored tweeter tracking. See  https://dev.twitter.com/docs/tweet-button#optout                                                        |
-  | 'facebook-send'       | 'false'                 | If the 'send' button should be included together with the 'like' button. See <code>send= in https://developers.facebook.com/docs/reference/plugins/like  |
-  | 'facebook-layout'     | 'button\_count'         | Layout of the button, i.e. where to put the count box. See <code>layout</code> in https://developers.facebook.com/docs/reference/plugins/like            |
-  | 'facebook-width'      | '100'                   | The width of the 'like' button. See <code>width= in https://developers.facebook.com/docs/reference/plugins/like                                          |
-  | 'facebook-locale'     | 'en\_US'                | Language of the 'like' button. See https://developers.facebook.com/docs/reference/plugins/like                                                     |
-  | 'facebook-show-faces' | 'false'                 | Whether to display profile photos in 'standard' layout. See <code>show_faces</code> in https://developers.facebook.com/docs/reference/plugins/like       |
+  | 'facebook-send'       | 'false'                 | If the 'send' button should be included together with the 'like' button. See <code>send</code> in https://developers.facebook.com/docs/reference/plugins/like |
+  | 'facebook-layout'     | 'button count'          | Layout of the button, i.e. where to put the count box. See <code>layout</code> in https://developers.facebook.com/docs/reference/plugins/like            |
+  | 'facebook-width'      | '100'                   | The width of the 'like' button. See <code>width</code> in https://developers.facebook.com/docs/reference/plugins/like                                    |
+  | 'facebook-locale'     | 'en US'                 | Language of the 'like' button. See https://developers.facebook.com/docs/reference/plugins/like                                                     |
+  | 'facebook-show-faces' | 'false'                 | Whether to display profile photos in 'standard' layout. See <code>show faces</code> in https://developers.facebook.com/docs/reference/plugins/like       |
   | 'plugins'             | ['twitter', 'facebook'] | Plugins to use.                                                                                                                                    |
 
 
