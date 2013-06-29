@@ -1,6 +1,6 @@
 #+TITLE: Help Me Share
 #+STARTUP: showeverything
-
+#+OPTIONS: toc:nil
 * Description
   /Help Me Share/ is a small javascript utility which adds /Share/ buttons for
   various services, i.e. /twitter/ and /facebook/.
@@ -107,15 +107,15 @@
 
   | Option                | Default                 | Description                                                                                                                                        |
   |-----------------------+-------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------+
-  | 'twitter-via'         | 'twitter-username'      | Username to append to tweet. See =via= in https://dev.twitter.com/docs/tweet-button#properties                                                     |
-  | 'twitter-size'        | 'medium'                | Size of the tweeter button. See =size= in https://dev.twitter.com/docs/tweet-button#properties                                                     |
-  | 'twitter-count'       | 'horizontal'            | Count box position. See =count= in https://dev.twitter.com/docs/tweet-button#properties                                                            |
+  | 'twitter-via'         | 'twitter-username'      | Username to append to tweet. See <code>via</code> in https://dev.twitter.com/docs/tweet-button#properties                                          |
+  | 'twitter-size'        | 'medium'                | Size of the tweeter button. See <code>size</code> in https://dev.twitter.com/docs/tweet-button#properties                                          |
+  | 'twitter-count'       | 'horizontal'            | Count box position. See <code>count</code> in https://dev.twitter.com/docs/tweet-button#properties                                                              |
   | 'twitter-dnt'         | 'false'                 | Opt out of tailored tweeter tracking. See  https://dev.twitter.com/docs/tweet-button#optout                                                        |
-  | 'facebook-send'       | 'false'                 | If the 'send' button should be included together with the 'like' button. See =send= in https://developers.facebook.com/docs/reference/plugins/like |
-  | 'facebook-layout'     | 'button_count'          | Layout of the button, i.e. where to put the count box. See =layout= in https://developers.facebook.com/docs/reference/plugins/like                 |
-  | 'facebook-width'      | '100'                   | The width of the 'like' button. See =width= in https://developers.facebook.com/docs/reference/plugins/like                                         |
-  | 'facebook-locale'     | 'en_US'                 | Language of the 'like' button. See https://developers.facebook.com/docs/reference/plugins/like                                                     |
-  | 'facebook-show-faces' | 'false'                 | Whether to display profile photos in 'standard' layout. See =show_faces= in https://developers.facebook.com/docs/reference/plugins/like            |
+  | 'facebook-send'       | 'false'                 | If the 'send' button should be included together with the 'like' button. See <code>send= in https://developers.facebook.com/docs/reference/plugins/like  |
+  | 'facebook-layout'     | 'button\_count'         | Layout of the button, i.e. where to put the count box. See <code>layout</code> in https://developers.facebook.com/docs/reference/plugins/like            |
+  | 'facebook-width'      | '100'                   | The width of the 'like' button. See <code>width= in https://developers.facebook.com/docs/reference/plugins/like                                          |
+  | 'facebook-locale'     | 'en\_US'                | Language of the 'like' button. See https://developers.facebook.com/docs/reference/plugins/like                                                     |
+  | 'facebook-show-faces' | 'false'                 | Whether to display profile photos in 'standard' layout. See <code>show_faces</code> in https://developers.facebook.com/docs/reference/plugins/like       |
   | 'plugins'             | ['twitter', 'facebook'] | Plugins to use.                                                                                                                                    |
 
 

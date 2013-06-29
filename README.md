@@ -1,35 +1,3 @@
-<div id="table-of-contents">
-<h2>Table of Contents</h2>
-<div id="text-table-of-contents">
-<ul>
-<li><a href="#sec-1">1. Description</a>
-<ul>
-<li><a href="#sec-1-1">1.1. Features</a></li>
-</ul>
-</li>
-<li><a href="#sec-2">2. Rationale</a></li>
-<li><a href="#sec-3">3. Example</a></li>
-<li><a href="#sec-4">4. Quickstart</a>
-<ul>
-<li><a href="#sec-4-1">4.1. Grab the mimified code</a></li>
-<li><a href="#sec-4-2">4.2. Insert the container div</a></li>
-<li><a href="#sec-4-3">4.3. Invoke the script</a></li>
-<li><a href="#sec-4-4">4.4. Style the container</a></li>
-<li><a href="#sec-4-5">4.5. Enjoy!</a></li>
-</ul>
-</li>
-<li><a href="#sec-5">5. Configuration</a></li>
-<li><a href="#sec-6">6. Development</a></li>
-<li><a href="#sec-7">7. Default Styles</a>
-<ul>
-<li><a href="#sec-7-1">7.1. Example A</a></li>
-<li><a href="#sec-7-2">7.2. Example B</a></li>
-</ul>
-</li>
-<li><a href="#sec-8">8. Contributions</a></li>
-</ul>
-</div>
-</div>
 
 # Description
 
@@ -159,21 +127,21 @@ You can specify various configuration options in a mapped passed to
 <tr>
 <td class="left">'twitter-via'</td>
 <td class="left">'twitter-username'</td>
-<td class="left">Username to append to tweet. See `via` in <https://dev.twitter.com/docs/tweet-button#properties></td>
+<td class="left">Username to append to tweet. See <code>via</code> in <https://dev.twitter.com/docs/tweet-button#properties></td>
 </tr>
 
 
 <tr>
 <td class="left">'twitter-size'</td>
 <td class="left">'medium'</td>
-<td class="left">Size of the tweeter button. See `size` in <https://dev.twitter.com/docs/tweet-button#properties></td>
+<td class="left">Size of the tweeter button. See <code>size</code> in <https://dev.twitter.com/docs/tweet-button#properties></td>
 </tr>
 
 
 <tr>
 <td class="left">'twitter-count'</td>
 <td class="left">'horizontal'</td>
-<td class="left">Count box position. See `count` in <https://dev.twitter.com/docs/tweet-button#properties></td>
+<td class="left">Count box position. See <code>count</code> in <https://dev.twitter.com/docs/tweet-button#properties></td>
 </tr>
 
 
@@ -187,27 +155,27 @@ You can specify various configuration options in a mapped passed to
 <tr>
 <td class="left">'facebook-send'</td>
 <td class="left">'false'</td>
-<td class="left">If the 'send' button should be included together with the 'like' button. See `send` in <https://developers.facebook.com/docs/reference/plugins/like></td>
+<td class="left">If the 'send' button should be included together with the 'like' button. See <code>send= in <https://developers.facebook.com/docs/reference/plugins/like></td>
 </tr>
 
 
 <tr>
 <td class="left">'facebook-layout'</td>
-<td class="left">'button<sub>count'</sub></td>
-<td class="left">Layout of the button, i.e. where to put the count box. See `layout` in <https://developers.facebook.com/docs/reference/plugins/like></td>
+<td class="left">'button\\<sub>count'</sub></td>
+<td class="left">Layout of the button, i.e. where to put the count box. See <code>layout</code> in <https://developers.facebook.com/docs/reference/plugins/like></td>
 </tr>
 
 
 <tr>
 <td class="left">'facebook-width'</td>
 <td class="left">'100'</td>
-<td class="left">The width of the 'like' button. See `width` in <https://developers.facebook.com/docs/reference/plugins/like></td>
+<td class="left">The width of the 'like' button. See <code>width= in <https://developers.facebook.com/docs/reference/plugins/like></td>
 </tr>
 
 
 <tr>
 <td class="left">'facebook-locale'</td>
-<td class="left">'en<sub>US'</sub></td>
+<td class="left">'en\\<sub>US'</sub></td>
 <td class="left">Language of the 'like' button. See <https://developers.facebook.com/docs/reference/plugins/like></td>
 </tr>
 
@@ -215,7 +183,7 @@ You can specify various configuration options in a mapped passed to
 <tr>
 <td class="left">'facebook-show-faces'</td>
 <td class="left">'false'</td>
-<td class="left">Whether to display profile photos in 'standard' layout. See `show_faces` in <https://developers.facebook.com/docs/reference/plugins/like></td>
+<td class="left">Whether to display profile photos in 'standard' layout. See <code>show<sub>faces</sub></code> in <https://developers.facebook.com/docs/reference/plugins/like></td>
 </tr>
 
 
