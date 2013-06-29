@@ -146,15 +146,12 @@ You can specify various configuration options in a mapped passed to
 <col class="left"/>
 
 <col class="left"/>
-
-<col class="left"/>
 </colgroup>
 <thead>
 <tr>
 <th scope="col" class="left">Option</th>
 <th scope="col" class="left">Default</th>
 <th scope="col" class="left">Description</th>
-<th scope="col" class="left">More info</th>
 </tr>
 </thead>
 
@@ -162,72 +159,63 @@ You can specify various configuration options in a mapped passed to
 <tr>
 <td class="left">'twitter-via'</td>
 <td class="left">'twitter-username'</td>
-<td class="left">Username to append to tweet.</td>
-<td class="left">'via' in <https://dev.twitter.com/docs/tweet-button#properties></td>
+<td class="left">Username to append to tweet. See `via` in <https://dev.twitter.com/docs/tweet-button#properties></td>
 </tr>
 
 
 <tr>
 <td class="left">'twitter-size'</td>
 <td class="left">'medium'</td>
-<td class="left">Size of the tweeter button.</td>
-<td class="left">'size' in <https://dev.twitter.com/docs/tweet-button#properties></td>
+<td class="left">Size of the tweeter button. See `size` in <https://dev.twitter.com/docs/tweet-button#properties></td>
 </tr>
 
 
 <tr>
 <td class="left">'twitter-count'</td>
 <td class="left">'horizontal'</td>
-<td class="left">Count box position.</td>
-<td class="left">'count' in <https://dev.twitter.com/docs/tweet-button#properties></td>
+<td class="left">Count box position. See `count` in <https://dev.twitter.com/docs/tweet-button#properties></td>
 </tr>
 
 
 <tr>
 <td class="left">'twitter-dnt'</td>
 <td class="left">'false'</td>
-<td class="left">Opt out of tailored tweeter tracking.</td>
-<td class="left"><https://dev.twitter.com/docs/tweet-button#optout></td>
+<td class="left">Opt out of tailored tweeter tracking. See  <https://dev.twitter.com/docs/tweet-button#optout></td>
 </tr>
 
 
 <tr>
 <td class="left">'facebook-send'</td>
 <td class="left">'false'</td>
-<td class="left">If the 'send' button should be included together with the 'like' button.</td>
-<td class="left">'send' in <https://developers.facebook.com/docs/reference/plugins/like></td>
+<td class="left">If the 'send' button should be included together with the 'like' button. See `send` in <https://developers.facebook.com/docs/reference/plugins/like></td>
 </tr>
 
 
 <tr>
 <td class="left">'facebook-layout'</td>
 <td class="left">'button<sub>count'</sub></td>
-<td class="left">Layout of the button, i.e. where to put the count box.</td>
-<td class="left">'layout' in <https://developers.facebook.com/docs/reference/plugins/like></td>
+<td class="left">Layout of the button, i.e. where to put the count box. See `layout` in <https://developers.facebook.com/docs/reference/plugins/like></td>
 </tr>
 
 
 <tr>
 <td class="left">'facebook-width'</td>
 <td class="left">'100'</td>
-<td class="left">The width of the 'like' button.</td>
-<td class="left">'width' in <https://developers.facebook.com/docs/reference/plugins/like></td>
+<td class="left">The width of the 'like' button. See `width` in <https://developers.facebook.com/docs/reference/plugins/like></td>
 </tr>
 
 
 <tr>
 <td class="left">'facebook-locale'</td>
 <td class="left">'en<sub>US'</sub></td>
-<td class="left">Language of the 'like' button.</td>
-<td class="left"><https://developers.facebook.com/docs/reference/plugins/like></td>
+<td class="left">Language of the 'like' button. See <https://developers.facebook.com/docs/reference/plugins/like></td>
 </tr>
 
 
 <tr>
 <td class="left">'facebook-show-faces'</td>
 <td class="left">'false'</td>
-<td class="left">Whether to display profile photos in 'standard' layout.</td>
-<td class="left">'show<sub>faces'</sub> in <https://developers.facebook.com/docs/reference/plugins/like></td>
+<td class="left">Whether to display profile photos in 'standard' layout. See `show_faces` in <https://developers.facebook.com/docs/reference/plugins/like></td>
 </tr>
 
 
@@ -235,7 +223,6 @@ You can specify various configuration options in a mapped passed to
 <td class="left">'plugins'</td>
 <td class="left">['twitter', 'facebook']</td>
 <td class="left">Plugins to use.</td>
-<td class="left">&#xa0;</td>
 </tr>
 </tbody>
 </table>
