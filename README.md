@@ -134,11 +134,148 @@ Facebook button clicked.
 
 # Configuration
 
-`TODO`
+You can specify various configuration options in a mapped passed to
+`help_me_share.core.init`. The is described below.
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col class="left"/>
+
+<col class="left"/>
+
+<col class="left"/>
+
+<col class="left"/>
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="left">Option</th>
+<th scope="col" class="left">Default</th>
+<th scope="col" class="left">Description</th>
+<th scope="col" class="left">More info</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td class="left">'twitter-via'</td>
+<td class="left">'twitter-username'</td>
+<td class="left">Username to append to tweet.</td>
+<td class="left">'via' in <https://dev.twitter.com/docs/tweet-button#properties></td>
+</tr>
+
+
+<tr>
+<td class="left">'twitter-size'</td>
+<td class="left">'medium'</td>
+<td class="left">Size of the tweeter button.</td>
+<td class="left">'size' in <https://dev.twitter.com/docs/tweet-button#properties></td>
+</tr>
+
+
+<tr>
+<td class="left">'twitter-count'</td>
+<td class="left">'horizontal'</td>
+<td class="left">Count box position.</td>
+<td class="left">'count' in <https://dev.twitter.com/docs/tweet-button#properties></td>
+</tr>
+
+
+<tr>
+<td class="left">'twitter-dnt'</td>
+<td class="left">'false'</td>
+<td class="left">Opt out of tailored tweeter tracking.</td>
+<td class="left"><https://dev.twitter.com/docs/tweet-button#optout></td>
+</tr>
+
+
+<tr>
+<td class="left">'facebook-send'</td>
+<td class="left">'false'</td>
+<td class="left">If the 'send' button should be included together with the 'like' button.</td>
+<td class="left">'send' in <https://developers.facebook.com/docs/reference/plugins/like></td>
+</tr>
+
+
+<tr>
+<td class="left">'facebook-layout'</td>
+<td class="left">'button<sub>count'</sub></td>
+<td class="left">Layout of the button, i.e. where to put the count box.</td>
+<td class="left">'layout' in <https://developers.facebook.com/docs/reference/plugins/like></td>
+</tr>
+
+
+<tr>
+<td class="left">'facebook-width'</td>
+<td class="left">'100'</td>
+<td class="left">The width of the 'like' button.</td>
+<td class="left">'width' in <https://developers.facebook.com/docs/reference/plugins/like></td>
+</tr>
+
+
+<tr>
+<td class="left">'facebook-locale'</td>
+<td class="left">'en<sub>US'</sub></td>
+<td class="left">Language of the 'like' button.</td>
+<td class="left"><https://developers.facebook.com/docs/reference/plugins/like></td>
+</tr>
+
+
+<tr>
+<td class="left">'facebook-show-faces'</td>
+<td class="left">'false'</td>
+<td class="left">Whether to display profile photos in 'standard' layout.</td>
+<td class="left">'show<sub>faces'</sub> in <https://developers.facebook.com/docs/reference/plugins/like></td>
+</tr>
+
+
+<tr>
+<td class="left">'plugins'</td>
+<td class="left">['twitter', 'facebook']</td>
+<td class="left">Plugins to use.</td>
+<td class="left">&#xa0;</td>
+</tr>
+</tbody>
+</table>
 
 # Development
 
-`TODO`
+Feel free to hack or contribute. The code is written in [clojurescript](https://github.com/emezeske/clojurescript) and
+can be build via [leiningen](https://github.com/technomancy/leiningen). Leiningen is the only perquisite, make sure to
+have it installed.
+
+Steps to build help-me-share from source.
+
+1.  Clone the code
+    
+        $ git clone https://github.com/puszczyk/help-me-share.git help-me-share
+
+2.  Build it
+    
+        $ cd help-me-share
+        $ lein cljsbuild clean
+        $ $ lein cljsbuild once
+
+As a result you will have to files: `resources/public/js/hms.js` and
+`resources/public/js/hms.min.js`. The former is readable javascript for
+development and debugging purposes and the latter is mimified,
+[google closure](https://developers.google.com/closure/compiler/) compiled and optimized version for a production use.
+
+You can easily test the code by putting the `resources/public` directory
+under a DOCUMENT ROOT of a web server or even use a simple python web
+server.
+
+    resources/public$ python -m SimpleHTTPServer 8888
+
+Assuming that you used the python webserver, just go to
+<http://localhost:8888/index-dev.html> to visit the development
+version of the code. Please note that there are no stylesheets applied. To
+see the default styles in action on the production version go to
+<http://localhost:8888/index.html> and <http://localhost:8888/index-fixed.html>.
+
+Enjoy!
 
 # Default Styles
 
@@ -161,3 +298,5 @@ the browser frame and appear to be floating over the site content.
 We are on EPL, please feel free to fork this repository and contribute. You
 can also raise any issues or suggest improvements though the *issues*
 interface <https://github.com/puszczyk/help-me-share/issues>.
+
+Feedback is appreciated!

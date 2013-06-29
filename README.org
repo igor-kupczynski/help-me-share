@@ -102,10 +102,58 @@
    Facebook button clicked.
 
 * Configuration
-  =TODO=
+  You can specify various configuration options in a mapped passed to
+  =help_me_share.core.init=. The is described below.
+
+  | Option                | Default                 | Description                                                              | More info                                                                   |
+  |-----------------------+-------------------------+--------------------------------------------------------------------------+-----------------------------------------------------------------------------|
+  | 'twitter-via'         | 'twitter-username'      | Username to append to tweet.                                             | 'via' in https://dev.twitter.com/docs/tweet-button#properties               |
+  | 'twitter-size'        | 'medium'                | Size of the tweeter button.                                              | 'size' in https://dev.twitter.com/docs/tweet-button#properties              |
+  | 'twitter-count'       | 'horizontal'            | Count box position.                                                      | 'count' in https://dev.twitter.com/docs/tweet-button#properties             |
+  | 'twitter-dnt'         | 'false'                 | Opt out of tailored tweeter tracking.                                    | https://dev.twitter.com/docs/tweet-button#optout                            |
+  | 'facebook-send'       | 'false'                 | If the 'send' button should be included together with the 'like' button. | 'send' in https://developers.facebook.com/docs/reference/plugins/like       |
+  | 'facebook-layout'     | 'button_count'          | Layout of the button, i.e. where to put the count box.                   | 'layout' in https://developers.facebook.com/docs/reference/plugins/like     |
+  | 'facebook-width'      | '100'                   | The width of the 'like' button.                                          | 'width' in https://developers.facebook.com/docs/reference/plugins/like      |
+  | 'facebook-locale'     | 'en_US'                 | Language of the 'like' button.                                           | https://developers.facebook.com/docs/reference/plugins/like                 |
+  | 'facebook-show-faces' | 'false'                 | Whether to display profile photos in 'standard' layout.                  | 'show_faces' in https://developers.facebook.com/docs/reference/plugins/like |
+  | 'plugins'             | ['twitter', 'facebook'] | Plugins to use.                                                          |                                                                             |
+
 
 * Development
-  =TODO=
+  Feel free to hack or contribute. The code is written in [[https://github.com/emezeske/clojurescript][clojurescript]] and
+  can be build via [[https://github.com/technomancy/leiningen][leiningen]]. Leiningen is the only perquisite, make sure to
+  have it installed.
+
+  Steps to build help-me-share from source.
+
+  1. Clone the code
+      : $ git clone https://github.com/puszczyk/help-me-share.git help-me-share
+
+  2. Build it
+     #+BEGIN_SRC 
+     $ cd help-me-share
+     $ lein cljsbuild clean
+     $ $ lein cljsbuild once
+     #+END_SRC
+     
+  As a result you will have to files: =resources/public/js/hms.js= and
+  =resources/public/js/hms.min.js=. The former is readable javascript for
+  development and debugging purposes and the latter is mimified,
+  [[https://developers.google.com/closure/compiler/][google closure]] compiled and optimized version for a production use.
+
+  You can easily test the code by putting the =resources/public= directory
+  under a DOCUMENT ROOT of a web server or even use a simple python web
+  server.
+   : resources/public$ python -m SimpleHTTPServer 8888
+
+  Assuming that you used the python webserver, just go to
+  [[http://localhost:8888/index-dev.html]] to visit the development
+  version of the code. Please note that there are no stylesheets applied. To
+  see the default styles in action on the production version go to
+  [[http://localhost:8888/index.html]] and [[http://localhost:8888/index-fixed.html]].
+
+  Enjoy!
+      
 
 * Default Styles
 ** Example A
@@ -128,3 +176,5 @@
   We are on EPL, please feel free to fork this repository and contribute. You
   can also raise any issues or suggest improvements though the /issues/
   interface [[https://github.com/puszczyk/help-me-share/issues]].
+
+  Feedback is appreciated!
