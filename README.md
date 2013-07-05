@@ -4,9 +4,9 @@
 *Help Me Share* is a small javascript utility which adds *Share* buttons for
 various services, i.e. *twitter* and *facebook*.
 
-It embedded the native twitter and facebook buttons and does not use any
+It embeds the native twitter and facebook buttons and does not use any
 intermediary. As a result the sharing statistics are not given away to any
-third-party except to the service that user clicked.
+third-party except for the service that user clicked.
 
 ## Features
 
@@ -20,20 +20,19 @@ third-party except to the service that user clicked.
 
 # Rationale
 
-There is a lot of sharing services one may what to use. It is troublesome
-to include all the buttons you may want manually. Hence, the project. You
-need include one `<div>`, the javascript and call a function which will
-create the buttons you want.
+*Help Me Share* is intended as a facility to simplify embedding and
+configuring third party sharing services on your website.
 
-It is intended as a facility to simplify embedding and configuring third
-party sharing services on your website.
+There is a lot of sharing services one may what to use. It is troublesome to
+include all the buttons you may want manually. This is why the project was
+born. To install *Help Me Share* you need only include one `<div>`, the
+javascript source and then call a function creating buttons you want.
 
-It is worth noting that there are some alternatives, most notably
-[Share This](http://en.wikipedia.org/wiki/ShareThis).
-One feature that differentiate `Help Me Share` is that it uses the
-sharing services directly. For instance, if your user clicks on the `Like`
-button the request will go directly to facebook. There are no other
-intermediaries to gather your visitors data.
+It is worth noting that there are some alternatives, e.g.  [Share This](http://en.wikipedia.org/wiki/ShareThis). What
+differentiates *Help Me Share* is that it connects with the sharing services
+directly. For instance, if a user clicks on the `Like` button, the request
+will go directly to facebook. There are no other intermediaries to gather
+(meta)data on your visitors.
 
 Please see an example (See section ) or go straight to the quickstart (See section ).
 
@@ -69,8 +68,8 @@ Include the script near the end of your page, e.g. just before the closing
     );
     </script>
 
-The function `help_me_share.code.init` does the job of creating buttons. It
-needs two arguments:
+The function `help_me_share.code.init` creates the buttons. It needs two
+arguments:
 
 -   Id of the container,
 
@@ -79,8 +78,8 @@ needs two arguments:
 
 ## Style the container
 
-You need either to provide your own style or use one of the defaults. The
-defaults can be downloaded from the following locations:
+You need either to provide your own style or use a default. The defaults
+can be downloaded from the following locations:
 
 -   <https://raw.github.com/puszczyk/help-me-share/master/resources/public/css/hms.css>
 
@@ -102,8 +101,8 @@ Facebook button clicked.
 
 # Configuration
 
-You can specify various configuration options in a mapped passed to
-`help_me_share.core.init`. The is described below.
+You can specify various configuration options in a map passed to
+`help_me_share.core.init`. The options are described below.
 
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
@@ -198,10 +197,10 @@ You can specify various configuration options in a mapped passed to
 # Development
 
 Feel free to hack or contribute. The code is written in [clojurescript](https://github.com/emezeske/clojurescript) and
-can be build via [leiningen](https://github.com/technomancy/leiningen). Leiningen is the only perquisite, make sure to
-have it installed.
+can be build via [leiningen](https://github.com/technomancy/leiningen). Leiningen and JDK are the only perquisites, make
+sure to have them installed.
 
-Steps to build help-me-share from source.
+Steps to build *Help Me Share* from source.
 
 1.  Clone the code
     
@@ -211,12 +210,12 @@ Steps to build help-me-share from source.
     
         $ cd help-me-share
         $ lein cljsbuild clean
-        $ $ lein cljsbuild once
+        $ lein cljsbuild once
 
 As a result you will have to files: `resources/public/js/hms.js` and
-`resources/public/js/hms.min.js`. The former is readable javascript for
-development and debugging purposes and the latter is mimified,
-[google closure](https://developers.google.com/closure/compiler/) compiled and optimized version for a production use.
+`resources/public/js/hms.min.js`. The former is a readable javascript for
+development and debugging, the latter is mimified, [google closure](https://developers.google.com/closure/compiler/) compiled
+and optimized version for a production use.
 
 You can easily test the code by putting the `resources/public` directory
 under a DOCUMENT ROOT of a web server or even use a simple python web
@@ -224,13 +223,11 @@ server.
 
     resources/public$ python -m SimpleHTTPServer 8888
 
-Assuming that you used the python webserver, just go to
-<http://localhost:8888/index-dev.html> to visit the development
-version of the code. Please note that there are no stylesheets applied. To
-see the default styles in action on the production version go to
-<http://localhost:8888/index.html> and <http://localhost:8888/index-fixed.html>.
-
-Enjoy!
+Assuming that your webserver is at localhost, just go to
+<http://localhost:8888/index-dev.html> to visit the development version of the
+code. Please note that there are no stylesheets applied. To see the default
+styles in action go to the production version at
+<http://localhost:8888/index.html> or <http://localhost:8888/index-fixed.html>.
 
 # Default Styles
 
@@ -238,8 +235,8 @@ Enjoy!
 
 ![Example 2. Default style - embedded on a page.](./docs/img/ex2.png)
 
-Default style - button are embedded on a fixed position in relation to the
-site content.
+Default style - button are embedded on a fixed position within the site
+content.
 
 ## Example B
 
@@ -250,8 +247,9 @@ the browser frame and appear to be floating over the site content.
 
 # Contributions
 
-We are on EPL, please feel free to fork this repository and contribute. You
-can also raise any issues or suggest improvements though the *issues*
-interface <https://github.com/puszczyk/help-me-share/issues>.
+*Help Me Share* is released under the EPL licence, please feel free to fork
+this repository and contribute. You can also raise any issues or suggest
+improvements though the *issues* interface
+<https://github.com/puszczyk/help-me-share/issues>.
 
-Feedback is appreciated!
+Your feedback is appreciated!
