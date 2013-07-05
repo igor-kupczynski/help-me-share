@@ -28,21 +28,22 @@ include all the buttons you may want manually. This is why the project was
 born. To install *Help Me Share* you need only include one `<div>`, the
 javascript source and then call a function creating buttons you want.
 
-It is worth noting that there are some alternatives, e.g.  [Share This](http://en.wikipedia.org/wiki/ShareThis). What
-differentiates *Help Me Share* is that it connects with the sharing services
-directly. For instance, if a user clicks on the `Like` button, the request
-will go directly to facebook. There are no other intermediaries to gather
-(meta)data on your visitors.
+It is worth noting that there are some alternatives, e.g.
+[Share This](http://en.wikipedia.org/wiki/ShareThis). What
+differentiates *Help Me Share* is that it connects with the sharing
+services directly. For instance, if a user clicks on the `Like`
+button, the request will go directly to facebook. There are no other
+intermediaries to gather (meta)data on your visitors.
 
-Please see an example (See section ) or go straight to the quickstart (See section ).
+Please see an [example](#example) or go straight to the [quickstart](#quickstart).
 
-# Example
+# <a id="example"></a>Example
 
 ![Example 1. Custom style (taken from <http://igor.kupczynski.info/>).](./docs/img/ex1.png)
 
 An example of a custom style, live demo at <http://igor.kupczynski.info/>.
 
-# Quickstart
+# <a id="quickstart"></a>Quickstart
 
 ## Grab the mimified code
 
@@ -53,7 +54,7 @@ Download if from:
 
 Put the following tag in the place where you want the buttons to show.
 
-    <div id="hms-container"></div>     
+    <div id="hms-container"></div>
 
 ## Invoke the script
 
@@ -126,63 +127,63 @@ You can specify various configuration options in a map passed to
 <tr>
 <td class="left">'twitter-via'</td>
 <td class="left">'twitter-username'</td>
-<td class="left">Username to append to tweet. See <code>via</code> in <https://dev.twitter.com/docs/tweet-button#properties></td>
+<td class="left">Username to append to tweet. See <code>via</code> in <a href="https://dev.twitter.com/docs/tweet-button#properties">Twitter docs</a>.</td>
 </tr>
 
 
 <tr>
 <td class="left">'twitter-size'</td>
 <td class="left">'medium'</td>
-<td class="left">Size of the tweeter button. See <code>size</code> in <https://dev.twitter.com/docs/tweet-button#properties></td>
+<td class="left">Size of the tweeter button. See <code>size</code> in <a href="https://dev.twitter.com/docs/tweet-button#properties">Twitter docs</a>.</td>
 </tr>
 
 
 <tr>
 <td class="left">'twitter-count'</td>
 <td class="left">'horizontal'</td>
-<td class="left">Count box position. See <code>count</code> in <https://dev.twitter.com/docs/tweet-button#properties></td>
+<td class="left">Count box position. See <code>count</code> in <a href="https://dev.twitter.com/docs/tweet-button#properties">Twitter docs</a>.</td>
 </tr>
 
 
 <tr>
 <td class="left">'twitter-dnt'</td>
 <td class="left">'false'</td>
-<td class="left">Opt out of tailored tweeter tracking. See  <https://dev.twitter.com/docs/tweet-button#optout></td>
+<td class="left">Opt out of tailored tweeter tracking. See  <a href="https://dev.twitter.com/docs/tweet-button#optout">Twitter docs</a>.</td>
 </tr>
 
 
 <tr>
 <td class="left">'facebook-send'</td>
 <td class="left">'false'</td>
-<td class="left">If the 'send' button should be included together with the 'like' button. See <code>send</code> in <https://developers.facebook.com/docs/reference/plugins/like></td>
+<td class="left">If the 'send' button should be included together with the 'like' button. See <code>send</code> in <a href="https://developers.facebook.com/docs/reference/plugins/like">Facebook docs</a>.</td>
 </tr>
 
 
 <tr>
 <td class="left">'facebook-layout'</td>
 <td class="left">'button count'</td>
-<td class="left">Layout of the button, i.e. where to put the count box. See <code>layout</code> in <https://developers.facebook.com/docs/reference/plugins/like></td>
+<td class="left">Layout of the button, i.e. where to put the count box. See <code>layout</code> in <a href="https://developers.facebook.com/docs/reference/plugins/like">Facebook docs</a>.</td>
 </tr>
 
 
 <tr>
 <td class="left">'facebook-width'</td>
 <td class="left">'100'</td>
-<td class="left">The width of the 'like' button. See <code>width</code> in <https://developers.facebook.com/docs/reference/plugins/like></td>
+<td class="left">The width of the 'like' button. See <code>width</code> in <a href="https://developers.facebook.com/docs/reference/plugins/like">Facebook docs</a>.</td>
 </tr>
 
 
 <tr>
 <td class="left">'facebook-locale'</td>
 <td class="left">'en US'</td>
-<td class="left">Language of the 'like' button. See <https://developers.facebook.com/docs/reference/plugins/like></td>
+<td class="left">Language of the 'like' button. See <a href="https://developers.facebook.com/docs/reference/plugins/like">Facebook docs</a>.</td>
 </tr>
 
 
 <tr>
 <td class="left">'facebook-show-faces'</td>
 <td class="left">'false'</td>
-<td class="left">Whether to display profile photos in 'standard' layout. See <code>show faces</code> in <https://developers.facebook.com/docs/reference/plugins/like></td>
+<td class="left">Whether to display profile photos in 'standard' layout. See <code>show faces</code> in <https://developers.facebook.com/docs/reference/plugins/like">Facebook docs</a>.</td>
 </tr>
 
 
