@@ -183,7 +183,7 @@ You can specify various configuration options in a map passed to
 <tr>
 <td class="left">'facebook-show-faces'</td>
 <td class="left">'false'</td>
-<td class="left">Whether to display profile photos in 'standard' layout. See <code>show faces</code> in <https://developers.facebook.com/docs/reference/plugins/like">Facebook docs</a>.</td>
+<td class="left">Whether to display profile photos in 'standard' layout. See <code>show faces</code> in <a href="https://developers.facebook.com/docs/reference/plugins/like">Facebook docs</a>.</td>
 </tr>
 
 
